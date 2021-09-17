@@ -1,10 +1,27 @@
 <html>
     <head>
+        <title>Junior Scoreboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../logo.png">
         <link rel="stylesheet" href="junior.css">
+        <script src="junior.js" type="module" defer></script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7B51M16P7H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7B51M16P7H');
+</script>
+
     </head>
     <body>
         <header>
-            <h1>Junior Division Scoreboard</h1>
+            <h1>Score Board</h1>
+            <h2>Junior Division</h2>
+            <hr />
             <nav>
                 <a href="../index.html">Current Winners</a>
                 <a href="../senior/senior.html">Senior Scoreboard</a>
@@ -14,23 +31,30 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Ninja Monk</th>
-                        <th>Winnings</th>
-                        <th>Current Streak</th>
-                        <th>Longest Streak</th>
+                        <th onclick="orderByMonks(monks)">Ninja Monk</th>
+                        <th onclick="orderByWinnings(monks)">Winnings</th>
+                        <th onclick="orderByCurrentStreaks(monks)">Current Streak</th>
+                        <th onclick="orderByLongestStreaks(monks)">Longest Streak</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Kiitos</td>
-                        <td>3</td>
-                        <td>2</td>
-                        <td>5</td>
-                    </tr>
-                </tbody>
+                <tbody></tbody>
                 <tfoot></tfoot>
             </table>
         </main>
-        <footer></footer>
+        <footer>
+            <nav>
+                <a href="https://youtube.com/playlist?list=PL9G55V1b65xDnDUX9eL2-PtVbiOca2Kht">YouTube</a>
+                <a href="https://podcasts.apple.com/us/podcast/one-liner-javascript-coding-challenge-for-frontend/id1581470094">Apple</a>
+                <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy81MDcwMWE4NC9wb2RjYXN0L3Jzcw?sa=X&ved=0CAMQ4aUDahcKEwiojLGNxfTyAhUAAAAAHQAAAAAQKQ">Google</a>
+                <a href="https://anchor.fm/siliconwat/">Anchor</a>
+                <a href="https://medium.com/siliconwat/one-liner-podcast/home">Medium</a>
+                <a href="https://codepen.io/collection/RzNjdN">Codepen</a>
+            </nav>
+            <nav>
+                <a href="https://twitter.com/siliconwat">Twitter</a>
+                <a href="https://www.facebook.com/siliconwat/">Facebook</a>
+            </nav>
+            <small><a href="https://siliconwat.com">Silicon Wat LLC</a> &copy; 2021</small>
+        </footer>
     </body>
 </html>

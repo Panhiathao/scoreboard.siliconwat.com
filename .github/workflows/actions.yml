@@ -1,0 +1,23 @@
+name: TestCafe
+on: [push, pull_request]
+jobs:
+  tests:
+    name: Run TestCafe
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Run tests on headless Chrome
+        uses: DevExpress/testcafe-action@latest
+        with:
+          version: latest
+          args: chrome:headless tests/*.js
+      - name: Run tests on headless Firefox
+        uses: DevExpress/testcafe-action@latest
+        with:
+          version: latest
+          args: firefox:headless tests/*.js

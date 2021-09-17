@@ -1,36 +1,17 @@
-const winners = {
-    senior: {
-        extreme: {
-            username: "3iitos",
-            profile: "https://twitter.com/3iitos"
-        },
-        hard: {
-            username: "3iitos",
-            profile: "https://twitter.com/3iitos"
-        }
-    },
-    junior: {
-        medium: {
-            username: "panhiatha0",
-            profile: "https://twitter.com/panhiatha0"
-        },
-        easy: {
-            username: "panhiatha0",
-            profile: "https://twitter.com/panhiatha0"
-        }
-    }
-}
+import {EpisodeWinners} from "/model.mjs"
+
+const NA = ""
 
 ;(function test () {
-    extreme.textContent = winners.senior.extreme.username
-    extreme.href = winners.senior.extreme.profile
+    extreme.textContent = EpisodeWinners[0].extreme ? EpisodeWinners[0].extreme.username : NA
+    extreme.href = EpisodeWinners[0].extreme ? EpisodeWinners[0].extreme.profile : NA
 
-    hard.textContent = winners.senior.hard.username
-    hard.href = winners.senior.hard.profile
+    hard.textContent = EpisodeWinners[0].hard ? EpisodeWinners[0].hard.username : NA
+    hard.href = EpisodeWinners[0].hard ? EpisodeWinners[0].hard.profile : NA
 
-    medium.textContent = winners.junior.medium.username
-    medium.href = winners.junior.medium.profile
+    medium.textContent = EpisodeWinners[0].medium ? EpisodeWinners[0].medium.username : NA
+    medium.href = EpisodeWinners[0].medium ? EpisodeWinners[0].medium.profile : NA
 
-    easy.textContent = winners.junior.easy.username
-    easy.href = winners.junior.easy.profile
+    easy.textContent = EpisodeWinners[0].easy ? EpisodeWinners[0].easy.username : NA
+    easy.href = EpisodeWinners[0].easy ? EpisodeWinners[0].easy.profile : NA
 })()

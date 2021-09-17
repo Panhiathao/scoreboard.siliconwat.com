@@ -1,3 +1,51 @@
+html {
+    font-size: 10pt;
+}
+
 body {
     background-image: linear-gradient(white, black);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    text-align: center;
+    border: 10px double green;
+    width: 50%;
+    padding: 25px;
+    margin: 30px;
+    background-image: linear-gradient(to top left, black, white);
+}
+
+footer {
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+h1 a:link, h1 a:visited {
+    color: green;
+}
+
+footer a:link, footer a:visited {
+    color: white;
+}
+
+section h2 {
+    text-decoration: underline double;
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 11pt;
+    }
+
+    main {
+        width: 70%;
+    }
 }
